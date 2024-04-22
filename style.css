@@ -1,0 +1,224 @@
+/* CSS for CodePen-Like Web App */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #4d4d4d, #333);
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.editor, .preview {
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    width: calc(100% - 40px);
+    margin-bottom: 40px;
+    background-color: #666;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+}
+
+textarea {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #444;
+    color: #fff;
+    resize: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-primary {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 123, 255, 0.5);
+}
+
+.button-primary:hover {
+    background-color: #0056b3;
+    border-color: #007bff; /* Blue border on hover */
+}
+
+.button-secondary {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.button-secondary:hover {
+    background-color: #e9ecef;
+}
+
+.export-button {
+    margin-top: 30px;
+}
+
+.preview {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding: 20px;
+    background-color: #222;
+}
+
+.preview-content {
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Custom CSS for syntax highlighting within text areas */
+
+/* HTML */
+#htmlCode {
+    color: #c3e88d; /* HTML tag color */
+}
+
+/* CSS */
+#cssCode {
+    color: #89ddff; /* CSS property and value color */
+}
+
+/* JavaScript */
+#jsCode {
+    color: #ffcb6b; /* JavaScript keyword and value color */
+}
+
+/* CSS for CodePen-Like Web App */
+
+/* Other CSS styles */
+
+textarea {
+    border: 2px solid transparent; /* Transparent border initially */
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #444;
+    color: #007bff; /* Blue text color */
+    resize: none;
+    transition: all 0.3s ease;
+    animation: blueAnimation 2s infinite alternate; /* Apply blue animation infinitely with alternate direction */
+}
+
+/* Blue animation */
+@keyframes blueAnimation {
+    0% {
+        border-color: transparent; /* Start with transparent border color */
+    }
+    100% {
+        border-color: #007bff; /* End with blue border color */
+    }
+}
+
+.button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid transparent; /* Transparent border initially */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: shadow 2s infinite cubic-bezier(0.25, 0.1, 0.25, 1); /* Apply shadow animation infinitely with cubic-bezier timing function */
+}
+
+/* Shadow animation */
+@keyframes shadow {
+    0% {
+        box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.3); /* Start with small shadow */
+    }
+    50% {
+        box-shadow: 0px 0px 20px rgba(0, 123, 255, 0.6); /* Transition to larger shadow */
+    }
+    100% {
+        box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.3); /* End with small shadow */
+    }
+}
+
+.preview {
+    display: none;
+    position: fixed; /* Position the preview section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding: 20px;
+    background-color: #222;
+    overflow: auto; /* Add scrollbars if needed */
+}
+
+.preview h2 {
+    font-size: 24px; /* Adjust the font size for smaller screens */
+}
+
+.preview-content {
+    margin-top: 20px; /* Add space between the title and content */
+}
+
+.preview iframe {
+    width: 100%; /* Make the iframe responsive */
+    min-height: 100%; /* Ensure the iframe fills the available space */
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
